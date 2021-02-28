@@ -9,7 +9,10 @@ namespace FoodPal.Notifications.Mappers
         public NotificationMapper()
         {
             this.CreateMap<INewNotificationAdded, NewNotificationAddedCommand>();
-            this.CreateMap<NewNotificationAddedCommand, Domain.Notification>();
+            this.CreateMap<NewNotificationAddedCommand, Notification>();
+
+            this.CreateMap<INotificationUpdated, NotificationUpdatedCommand>();
+            this.CreateMap<NotificationUpdatedCommand, Notification>();
         }
     }
 }
